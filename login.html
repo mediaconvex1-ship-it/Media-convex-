@@ -12,14 +12,25 @@
   <h2>PLEASE LOGIN</h2>
   <input type="email" id="signupEmail" placeholder="Email">
   <input type="password" id="signupPassword" placeholder="Password">
-  <button id="signupBtn">Login</button>
+  <button id="signupBtn" onclick="login()">Login</button>
   <p>Don't have an account? <a href="signup.html">Sign up</a></p>
   <p id="signupMessage"></p>
 </section>
 
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyAW-t8mjEpJ6rshuEMwIYFjmI2Gx0vZCUU",
+    authDomain: "media-convex.firebaseapp.com",
+    projectId: "media-convex",
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+
 <script src="auth.js"></script>
 
 </body>
-</html>
+    </html>
