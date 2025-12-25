@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Movie - Media Convex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-box">
+    <img src="images/Logo.png" alt="Media Convex Logo">
+    <h1>MEDIA CONVEX</h1>
+  </div>
+</header>
+
+<section class="watch-section">
+  <h2 id="movieTitle">Movie Title</h2>
+  <video id="moviePlayer" width="100%" controls controlsList="nodownload">
+    <source id="movieSource" src="" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <button id="downloadBtn">Download Movie</button>
+</section>
+
+<button id="favBtn">❤️ Add to My List</button>
+
+<div class="rating">
+  <span data-rate="1">⭐</span>
+  <span data-rate="2">⭐</span>
+  <span data-rate="3">⭐</span>
+  <span data-rate="4">⭐</span>
+  <span data-rate="5">⭐</span>
+</div>
+
+<p id="message" style="text-align:center;color:red;margin-top:10px;"></p>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js"></script>
+<script src="js/watch.js"></script>
+</body>
+</html>

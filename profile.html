@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Media Convex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-box">
+    <img src="images/Logo.png" alt="Media Convex Logo">
+    <h1>MEDIA CONVEX</h1>
+  </div>
+</header>
+
+<section class="profile-section">
+  <h2>Your Dashboard</h2>
+  <p id="userEmail"></p>
+  <p id="freeViews"></p>
+  <p id="paidStatus"></p>
+  <button id="goPaymentBtn">Go to Payment</button>
+  <button id="logoutBtn">Logout</button>
+</section>
+
+<section class="auth-section">
+  <h2>Admin Upload</h2>
+  
+  <input type="text" id="title" placeholder="Movie title">
+  <input type="text" id="category" placeholder="Category">
+  <input type="file" id="video">
+  <input type="file" id="poster">
+  
+  <button id="uploadBtn">Upload</button>
+</section>
+
+<section class="new-releases">
+  <h2>❤️ My List</h2>
+  <div class="release-grid" id="favList"></div>
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+</html>

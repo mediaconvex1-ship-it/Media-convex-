@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Convex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-box">
+    <img src="/image (1).png" alt="Media Convex Logo">
+    <h1>MEDIA CONVEX</h1>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search movies...">
+    <span class="search-icon">🔍</span>
+  </div>
+
+  <nav class="nav" id="nav">
+    <a href="#new-releases">Home</a>
+    <a href="#movies">Movies</a>
+    <a href="#">Series</a>
+    <a href="#">Creators Hub</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <div class="menu-btn" id="menuBtn">&#9776;</div>
+</header>
+
+<ul class="search-results" id="searchResults">
+  <li data-title="Avengers">Avengers</li>
+  <li data-title="Fast and Furious">Fast and Furious</li>
+  <li data-title="John Wick">John Wick</li>
+</ul>
+
+<section class="categories">
+  <button class="cat active">All</button>
+  <button class="cat">Movies</button>
+  <button class="cat">Series</button>
+  <button class="cat">Action</button>
+  <button class="cat">Drama</button>
+  <button class="cat">Comedy</button>
+  <button class="cat">Animation</button>
+  <button class="cat">K-Drama</button>
+  <button class="cat">Indians</button>
+</section>
+
+<section class="continue-watching" id="continueWatching" style="display:none;">
+  <div class="section-header">
+    <h2>▶ Continue Watching</h2>
+  </div>
+
+  <div class="continue-list" id="continueList">
+    <!-- Filled dynamically -->
+  </div>
+</section>
+
+<section class="trending">
+  <div class="section-header">
+    <h2>🔥 Trending Now</h2>
+    <a href="#" class="view-all">View all</a>
+  </div>
+
+  <div class="trending-list">
+    <div class="trending-card" data-id="avengers">
+      <span class="rank">1</span>
+      <img src="images/avengers.jpg" alt="Avengers">
+      <h4>Avengers</h4>
+      <button class="watchBtn">Watch</button>
+    </div>
+
+    <div class="trending-card" data-id="johnwick">
+      <span class="rank">2</span>
+      <img src="images/johnwick.jpg" alt="John Wick">
+      <h4>John Wick</h4>
+      <button class="watchBtn">Watch</button>
+    </div>
+
+    <div class="trending-card" data-id="fastx">
+      <span class="rank">3</span>
+      <img src="images/fastx.jpg" alt="Fast X">
+      <h4>Fast X</h4>
+      <button class="watchBtn">Watch</button>
+    </div>
+  </div>
+</section>
+
+<section class="new-releases">
+  <div class="section-header">
+    <h2>🆕 New Releases</h2>
+    <a href="#" class="view-all">View all</a>
+  </div>
+
+  <div class="release-grid">
+    <div class="release-card" data-id="dune2">
+      <span class="badge">NEW</span>
+      <img src="images/dune2.jpg" alt="Dune Part Two">
+      <h4>Dune: Part Two</h4>
+      <button class="watchBtn">Watch</button>
+    </div>
+
+    <div class="release-card" data-id="aquaman2">
+      <span class="badge">NEW</span>
+      <img src="images/aquaman2.jpg" alt="Aquaman 2">
+      <h4>Aquaman and the Lost Kingdom</h4>
+      <button class="watchBtn">Watch</button>
+    </div>
+
+    <div class="release-card" data-id="equalizer3">
+      <span class="badge">NEW</span>
+      <img src="images/equalizer3.jpg" alt="Equalizer 3">
+      <h4>The Equalizer 3</h4>
+      <button class="watchBtn">Watch</button>
+    </div>
+
+    <div class="release-card" data-id="wonka">
+      <span class="badge">NEW</span>
+      <img src="images/wonka.jpg" alt="Wonka">
+      <h4>Wonka</h4>
+      <button class="watchBtn">Watch</button>
+    </div>
+  </div>
+</section>
+
+<section class="top-rated">
+  <div class="section-header">
+    <h2>⭐ Top Rated</h2>
+  </div>
+  
+  <section class="movies-section">
+  <div class="section-header">
+    <h2>🎬 Movies</h2>
+    <a href="#" class="view-all">View all</a>
+  </div>
+
+  <div class="movies-grid" id="moviesGrid">
+    <!-- Movie cards will be generated here -->
+    <!-- Example static card: -->
+    <div class="movie-card" data-id="avengers">
+      <img src="images/avengers.jpg" alt="Avengers">
+      <h4>Avengers</h4>
+      <p>Action / 2025</p>
+      <button class="watchBtn">Watch</button>
+    </div>
+  </div>
+</section>
+
+  <div class="release-grid" id="topRatedList"></div>
+</section>
+
+<section class="movies">
+  <div class="movie-card" data-category="Movies">
+    <img src="https://via.placeholder.com/300x450">
+    <h3>Avengers</h3>
+    <button>Watch</button>
+  </div>
+  <div class="movie-card" data-category="Series">
+    <img src="https://via.placeholder.com/300x450">
+    <h3>The Godfather S1</h3>
+    <button>Watch</button>
+  </div>
+  <div class="movie-card" data-category="Comedy">
+    <img src="https://via.placeholder.com/300x450">
+    <h3>Superbad</h3>
+    <button>Watch</button>
+  </div>
+</section>
+
+<section class="movies">
+  <div class="movie-card" data-id="avengers" data-category="Action" data-src="movies/avengers.mp4">
+    <img src="images/avengers.jpg" alt="Avengers">
+    <h3>Avengers</h3>
+    <button class="watchBtn">Watch</button>
+  </div>
+  <div class="movie-card" data-id="godfather" data-category="Animation" data-src="Juice WRLD - Hear Me Calling(720P_HD).mp4">
+    <img src="Ndungo.jpg" alt="Godfather">
+    <h3>Juice wrld</h3>
+    <button class="watchBtn">Watch</button>
+  </div>
+</section>
+
+<section class="movies">
+  <div class="movie-card" data-category="Indians" data-id="avengers">
+    <img src="https://via.placeholder.com/300x450">
+    <h3>Avengers</h3>
+    <button class="watchBtn">Watch</button>
+  </div>
+  <div class="movie-card" data-category="K-Drama" data-id="godfather">
+    <img src="/Ndungo.jpg">
+    <h3>The Godfather</h3>
+    <button class="watchBtn">Watch</button>
+  </div>
+</section>
+
+<section class="movies">
+  <div class="movie-card">
+    <img src="https://via.placeholder.com/300x450">
+    <h3>Sample Movie</h3>
+    <button>Watch</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>Media Convex</h3>
+      <p>
+        Stream and download the latest movies, music, and videos.
+        Watch free previews, then unlock unlimited access.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Movies</h4>
+      <ul>
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Drama</a></li>
+        <li><a href="#">Comedy</a></li>
+        <li><a href="#">Horror</a></li>
+        <li><a href="#">Romance</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">My Account</a></li>
+        <li><a href="payment.html">Pricing</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">New Releases</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Report a Problem</a></li>
+        <li><a href="#">DMCA</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Media Convex. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/movies.js"></script>
+</body>
+</html>
